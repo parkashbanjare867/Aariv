@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,
+initial-scala=1.0">
+    <title>Electrician Trade Information</title>
+
+    <style>
+
+       body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#eef2f7;
+}
+
+/* Header */
+header{
+    background: linear-gradient(45deg,#0d47a1,#1976d2);
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+ /* Slider */
+.slider{
+    width: 100%;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slides{
+    display: flex;
+    width: 300%;
+    transition: 0.5s;
+}
+
+.slides img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* Buttons */
+.prev, .next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev{ left: 10px; }
+.next{ right: 10px; }
+        
+        /*box */
+        .box{
+            width: 80%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+header h1{
+    margin:0;
+    font-size:40px;
+}
+
+/* Container */
+.container{
+    width:85%;
+    margin:auto;
+    margin-top:20px;
+}
+
+/* Box Style */
+.box{
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.box:hover{
+    transform:scale(1.02);
+}
+
+h2{
+    color:#0d47a1;
+}
+
+ul{
+    line-height:28px;
+}
+
+/* Footer */
+footer{
+    background:#0d47a1;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:30px;
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Electrician Trade</h1>
+    <p>ITI Electrician Course Information</p>
+</header>
+
+<div class="container">
+
+    <!-- Slider Start -->
+<div class="slider">
+    <div class="slides" id="slideBox">
+        <img src="PHOTO#1.jpg">
+        <img src="PHOTO#2.jpg">
+        <img src="PHOTO#1.jpg">
+    </div>
+
+    <span class="prev" onclick="moveSlide(-1)">&#10094;</span>
+    <span class="next" onclick="moveSlide(-1)">&#10095;</span>
+</div>
+<!-- Slider end -->
+
+<div class="container">
+
+    <div class="box">
+        <h2>Electrician Trade Introduction</h2>
+        <p>
+            Electrician trade mein students ko electrical wiring, installation, maintenance aur repair ka training diya jata hai.
+        </p>
+    </div>
+
+    <div class="box">
+        <h2>Course Duration & Structure</h2>
+        <ul>
+            <li>Total Duration – 2 Years</li>
+            <li>4 Semesters</li>
+            <li>Theory + Practical Training</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h2>Eligibility Criteria</h2>
+        <ul>
+            <li>10th Pass (Mathematics & Science)</li>
+            <li>Minimum Age – 14 Years</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h2>Detailed Electrician Syllabus</h2>
+        <ul>
+            <li>Basic Electricity</li>
+            <li>Electrical Wiring</li>
+            <li>Transformer</li>
+            <li>Motor Winding</li>
+            <li>Electrical Measuring Instruments</li>
+            <li>Domestic Appliances</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h2>Skills Developed in Electrician</h2>
+        <ul>
+            <li>Wiring Installation</li>
+            <li>Fault Finding</li>
+            <li>Maintenance Work</li>
+            <li>Safety Handling</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h2>Tools & Machines Used</h2>
+        <ul>
+            <li>Tester</li>
+            <li>Multimeter</li>
+            <li>Pliers</li>
+            <li>Drill Machine</li>
+            <li>Wire Stripper</li>
+        </ul>
+    </div>
+
+</div>
+<footer>
+<marquee><p>© ELECTRICAN Trade Full Information Website</p></marquee>
+</footer>
+
+<script>
+let index = 0;
+
+function moveSlide(step){
+    index += step;
+    showSlide();
+}
+
+function showSlide(){
+    if(index > 2){ index = 0; }
+    if(index < 0){ index = 2; }
+
+    document.getElementById("slideBox").style.marginLeft =
+    "-" + (index * 100) + "%";
+}
+
+/* Auto Slide */
+setInterval(function(){
+    index++;
+    showSlide();
+}, 3000);
+</script>
+
+</body>
+</html>

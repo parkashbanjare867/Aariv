@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">🏠 <span>ITI</span> कॉलेज</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="trades.html">Trades</a>
+            <a href="admission.html">Admission</a>
+            <a href="login.html">Login</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<form action="admission.php" method="post">
+
+<div class="container">
+    <h2 class="section-title">Admission Form</h2>
+
+    <div class="form-box">
+        
+        <input type="text" name="Student_Name" placeholder="student name">
+        <input type="text" name="Father_name" placeholder="Father Name">
+
+        <select>
+            <option>select gender</option>
+            <option>male</option>
+            <option>female</option>
+            <option>other</option>
+        </select>
+
+        <input type="date">
+
+        <select>
+            <option>Select Category</option>
+            <option>general</option>
+            <option>obc</option>
+            <option>sc</option>
+            <option>st</option>
+        </select>
+
+        
+        
+        <select>
+            <option>Select Trade</option>
+            <option>COPA</option>
+            <option>Electrician</option>
+            <option>Fitter</option>
+            
+        </select>
+
+        <input type="text" placeholder="Aadhar Number">
+
+        <input type="email" name="email" placeholder="gmail">
+        <input type="tel" name="mobile" placeholder="Mobile Number">
+        <input type="text" placeholder="Address">
+        <label>Upload Photo</label>
+        <input type="file">
+
+        <label>Upload 10th marksheet</label>
+        <input type="file">
+
+        <button onclick="admissionSubmit()">Submit Admission</button>
+        <button type="reset">Reset form</button>
+
+        <div class="success" id="adMsg"></div>
+    </div>
+</div>
+
+</form>
+
+<footer>
+   <marquee> © 2026 ITI कॉलेज | Admission Page </marquee>
+</footer>
+
+</body>
+</html>
